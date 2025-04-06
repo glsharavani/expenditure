@@ -1,0 +1,166 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0a0a0a;
+    background-image: url('solo-purple-bg.jpg'); /* Replace with a classy Solo Leveling dark bg */
+    background-size: cover;
+    background-position: center;
+    color: #e5e5e5;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 25px;
+    background: rgba(15, 0, 30, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(145, 0, 255, 0.4);
+    animation: slideIn 0.6s ease-out;
+    border: 1px solid #7a00cc;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+h1 {
+    text-align: center;
+    color: #c47fff;
+    text-shadow: 0 0 15px #8f00ff;
+    animation: pulse 1.5s infinite alternate;
+    letter-spacing: 2px;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.03); }
+}
+
+.user-input, .expense-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+input[type="text"], input[type="number"], select {
+    padding: 10px;
+    background-color: #1a001f;
+    color: #f0eaff;
+    border: 1px solid #7f3dbd;
+    border-radius: 6px;
+    width: calc(70% - 10px);
+    margin-right: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    border-color: #ba55ff;
+    box-shadow: 0 0 10px #9c4dcc;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    background: linear-gradient(145deg, #7a00cc, #ba55ff);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 0 15px #a020f0;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #d580ff;
+}
+
+.expense-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.expense-buttons button {
+    flex: 1;
+    margin: 0 5px;
+}
+
+h2 {
+    margin: 20px 0;
+    color: #d5b3ff;
+    font-family: 'Segoe UI', sans-serif;
+    text-shadow: 0 0 8px #7000cc;
+}
+
+#expense-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#expense-list li {
+    padding: 12px;
+    margin: 6px 0;
+    background-color: rgba(60, 0, 100, 0.6);
+    border-left: 5px solid #bb5fff;
+    color: #ffffff;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+    box-shadow: 0 0 10px #7e3bd1;
+    border-radius: 4px;
+}
+
+#expense-list li:nth-child(odd) {
+    background-color: rgba(90, 0, 130, 0.7);
+    border-left: 5px solid #ff80ff;
+}
+
+div {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .user-input, .expense-input {
+        flex-direction: column;
+    }
+
+    input[type="text"], input[type="number"], select {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-content img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 0 15px #9c4dcc;
+    border: 2px solid #7f3dbd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-content img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px #c47fff;
+}
+
+.about-text {
+    max-width: 400px;
+}
+

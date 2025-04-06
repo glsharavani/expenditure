@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+
+        <div class="user-input">
+            <input type="text" id="user-name" placeholder="User Name" required>
+            <button onclick="addUser()">Add User</button>
+        </div>
+
+        <div class="user-select">
+            <select id="user-select" onchange="loadUserExpenses()">
+                <option value="">Select User</option>
+            </select>
+        </div>
+
+        <h2 id="current-user"></h2>
+        <div class="expense-input">
+            <input type="text" id="expense-name" placeholder="Expense Name" required>
+            <input type="number" id="expense-amount" placeholder="Amount" required>
+        </div>
+        
+        <div class="expense-buttons">
+            <button onclick="addExpense()">Add Expense</button>
+            <button onclick="saveData()">Save Data</button> 
+        </div>
+
+        <h2>Total Expenses for Current User: ₹<span id="total-expenses">0.00</span></h2>
+        <h2>Total Expenses for All Users: ₹<span id="grand-total">0.00</span></h2>
+        <ul id="expense-list"></ul>
+
+        <div>
+            <button onclick="clearData()">Clear All Data</button>
+        </div>
+    </div>
+
+    <!-- 🔮 About Section -->
+    <div class="container about-section">
+        <div class="about-content">
+            <img src="h.jpg" alt="GL Shravani">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    I'm GL Shravani, a final-year BCA student at Shree Medha Degree College. With a strong interest in web development and practical problem-solving, I created this Expense Tracker website as a simple and efficient tool to help users manage their daily finances. This project reflects my growing skills in front-end and back-end development, along with my passion for building user-friendly digital solutions.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="scr.jss.js"></script>
+</body>
+</html>
